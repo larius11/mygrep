@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-int mypattern(char * pattern, char * patfile);
+#include "mygrep.h"
 
 char filename(char * arg, char * buff){
 	if((arg[0]=='-')&&
@@ -28,8 +25,7 @@ char filename(char * arg, char * buff){
 	return 0;
 }
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv){
 	char patfile[100];
 	char f = 0;
 	int i = 1;

@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-typedef enum { TRUE = 1, FALSE = 0 } bool;
+#include "mygrep.h"
 
 int myfilter(char **pattern_grid, int sz){
 	

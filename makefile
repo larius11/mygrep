@@ -1,10 +1,5 @@
-FILES :=                                 \
-    mygrep.c		                     \
-    mypattern.c		                     \
-    myfilter.c
-
 CXX      		:= gcc
-ALLO			:= mygrep.o mypattern.o myfilter.o
+ALLO			:= mygrep.o mypattern.o myfilter.o isDigit.o set.o range.o otoc.o
 
 all: clean mygrep
 
@@ -20,8 +15,17 @@ mypattern.o:
 myfilter.o:
 	$(CXX) -c myfilter.c 
 
-test: mygrep
-	@echo 'Testing'
+isDigit.o:
+	$(CXX) -c isDigit.c
+
+set.o:
+	$(CXX) -c set.c
+
+range.o:
+	$(CXX) -c range.c
+
+otoc.o:
+	$(CXX) -c otoc.c
 
 clean:
 	rm -f *.o
